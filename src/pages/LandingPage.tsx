@@ -1,24 +1,24 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Code, ChartBar, Globe, Users, Database } from "lucide-react";
+import { ArrowRight, Code, ChartBar, Globe, Users, Database, Laptop, Monitor, BarChart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <header className="bg-gradient-to-r from-purple-700 to-violet-600 text-white">
         <div className="container mx-auto px-4 py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Soluções Digitais para o Crescimento do seu Negócio
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-purple-100">
               Desenvolvimento web profissional e análise de dados com Power BI para empresas médias e pequenas.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+              <Button size="lg" className="bg-white text-purple-700 hover:bg-purple-50">
                 Solicitar Orçamento
               </Button>
               <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
@@ -33,7 +33,7 @@ const LandingPage = () => {
       <section className="py-20 bg-gray-50" id="servicos">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossos Serviços</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-800">Nossos Serviços</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Oferecemos soluções completas em tecnologia para impulsionar o crescimento do seu negócio.
             </p>
@@ -43,8 +43,8 @@ const LandingPage = () => {
             {/* Web Development */}
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-6">
-                <div className="rounded-full bg-blue-100 p-3 w-12 h-12 flex items-center justify-center mb-4">
-                  <Code className="h-6 w-6 text-blue-600" />
+                <div className="rounded-full bg-purple-100 p-3 w-12 h-12 flex items-center justify-center mb-4">
+                  <Code className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Desenvolvimento Web</h3>
                 <p className="text-gray-600">
@@ -56,8 +56,8 @@ const LandingPage = () => {
             {/* Power BI */}
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-6">
-                <div className="rounded-full bg-blue-100 p-3 w-12 h-12 flex items-center justify-center mb-4">
-                  <ChartBar className="h-6 w-6 text-blue-600" />
+                <div className="rounded-full bg-purple-100 p-3 w-12 h-12 flex items-center justify-center mb-4">
+                  <ChartBar className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Dashboards Power BI</h3>
                 <p className="text-gray-600">
@@ -69,8 +69,8 @@ const LandingPage = () => {
             {/* Consultancy */}
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-6">
-                <div className="rounded-full bg-blue-100 p-3 w-12 h-12 flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-blue-600" />
+                <div className="rounded-full bg-purple-100 p-3 w-12 h-12 flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Consultoria Digital</h3>
                 <p className="text-gray-600">
@@ -78,6 +78,77 @@ const LandingPage = () => {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+      
+      {/* Portfolio Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-purple-50" id="portfolio">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-800">Nosso Portfólio</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Conheça alguns dos nossos trabalhos recentes e veja como podemos ajudar o seu negócio.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Portfolio Item 1 */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg">
+              <div className="bg-purple-200 aspect-video rounded-t-lg"></div>
+              <div className="p-6 bg-white">
+                <h3 className="text-xl font-bold mb-1">E-commerce Moderno</h3>
+                <p className="text-gray-500 text-sm mb-3">Desenvolvimento Web</p>
+                <p className="text-gray-600 text-sm">
+                  Plataforma de e-commerce com integração de pagamentos e sistema de gestão de estoque.
+                </p>
+              </div>
+              <div className="absolute inset-0 bg-purple-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/20">
+                  Ver Projeto
+                </Button>
+              </div>
+            </div>
+            
+            {/* Portfolio Item 2 */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg">
+              <div className="bg-purple-300 aspect-video rounded-t-lg"></div>
+              <div className="p-6 bg-white">
+                <h3 className="text-xl font-bold mb-1">Dashboard Financeiro</h3>
+                <p className="text-gray-500 text-sm mb-3">Power BI</p>
+                <p className="text-gray-600 text-sm">
+                  Dashboard completo para acompanhamento de métricas financeiras e projeções de negócio.
+                </p>
+              </div>
+              <div className="absolute inset-0 bg-purple-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/20">
+                  Ver Projeto
+                </Button>
+              </div>
+            </div>
+            
+            {/* Portfolio Item 3 */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg">
+              <div className="bg-purple-400 aspect-video rounded-t-lg"></div>
+              <div className="p-6 bg-white">
+                <h3 className="text-xl font-bold mb-1">App de Gestão</h3>
+                <p className="text-gray-500 text-sm mb-3">Aplicação Web</p>
+                <p className="text-gray-600 text-sm">
+                  Sistema de gestão empresarial com múltiplos módulos para controle de operações.
+                </p>
+              </div>
+              <div className="absolute inset-0 bg-purple-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/20">
+                  Ver Projeto
+                </Button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button className="bg-purple-600 hover:bg-purple-700">
+              Ver Mais Projetos <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
@@ -174,11 +245,11 @@ const LandingPage = () => {
       </section>
       
       {/* Contact */}
-      <section className="py-20 bg-blue-600 text-white" id="contato">
+      <section className="py-20 bg-purple-700 text-white" id="contato">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
-            <p className="text-blue-100 max-w-2xl mx-auto">
+            <p className="text-purple-100 max-w-2xl mx-auto">
               Estamos prontos para ajudar a impulsionar seu negócio com soluções digitais personalizadas.
             </p>
           </div>
@@ -192,14 +263,14 @@ const LandingPage = () => {
                       <label className="block text-sm font-medium mb-1">Nome</label>
                       <input 
                         type="text" 
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                       />
                     </div>
                     <div className="col-span-2 md:col-span-1">
                       <label className="block text-sm font-medium mb-1">Empresa</label>
                       <input 
                         type="text" 
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                       />
                     </div>
                   </div>
@@ -207,12 +278,12 @@ const LandingPage = () => {
                     <label className="block text-sm font-medium mb-1">E-mail</label>
                     <input 
                       type="email" 
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1">Como podemos ajudar?</label>
-                    <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                       <option>Desenvolvimento Web</option>
                       <option>Dashboards Power BI</option>
                       <option>Consultoria</option>
@@ -223,10 +294,10 @@ const LandingPage = () => {
                     <label className="block text-sm font-medium mb-1">Mensagem</label>
                     <textarea 
                       rows={4}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                     ></textarea>
                   </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700">
                     Enviar Mensagem
                   </Button>
                 </form>
@@ -249,9 +320,9 @@ const LandingPage = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Serviços</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Desenvolvimento Web</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Power BI</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Consultoria</a></li>
+                <li><a href="#servicos" className="text-gray-400 hover:text-white">Desenvolvimento Web</a></li>
+                <li><a href="#servicos" className="text-gray-400 hover:text-white">Power BI</a></li>
+                <li><a href="#servicos" className="text-gray-400 hover:text-white">Consultoria</a></li>
               </ul>
             </div>
             <div>
@@ -259,6 +330,7 @@ const LandingPage = () => {
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-400 hover:text-white">Início</a></li>
                 <li><a href="#servicos" className="text-gray-400 hover:text-white">Serviços</a></li>
+                <li><a href="#portfolio" className="text-gray-400 hover:text-white">Portfólio</a></li>
                 <li><a href="#sobre" className="text-gray-400 hover:text-white">Sobre</a></li>
                 <li><a href="#contato" className="text-gray-400 hover:text-white">Contato</a></li>
               </ul>
@@ -281,7 +353,7 @@ const LandingPage = () => {
       {/* App Navigation Link */}
       <div className="fixed bottom-5 right-5">
         <Link to="/matches">
-          <Button variant="outline" className="bg-white shadow-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
+          <Button variant="outline" className="bg-white shadow-lg border-2 border-purple-600 text-purple-600 hover:bg-purple-50">
             Acessar App
           </Button>
         </Link>
