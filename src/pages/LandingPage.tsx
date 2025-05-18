@@ -1,14 +1,19 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Code, ChartBar, Globe, Users, Database, Laptop, Monitor, BarChart } from "lucide-react";
+import { ArrowRight, Code, ChartBar, Globe, Users, Database, Laptop, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navbar from "@/components/Navbar";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
+      {/* Navbar */}
+      <Navbar />
+      
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-purple-700 to-violet-600 text-white">
+      <header className="bg-gradient-to-r from-purple-700 to-violet-600 text-white pt-24">
         <div className="container mx-auto px-4 py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -26,6 +31,13 @@ const LandingPage = () => {
               </Button>
             </div>
           </div>
+        </div>
+        <div className="relative h-64 overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
+            alt="Tecnologia e Inovação" 
+            className="w-full h-full object-cover opacity-20"
+          />
         </div>
       </header>
       
@@ -95,7 +107,13 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Portfolio Item 1 */}
             <div className="group relative overflow-hidden rounded-lg shadow-lg">
-              <div className="bg-purple-200 aspect-video rounded-t-lg"></div>
+              <div className="aspect-video rounded-t-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
+                  alt="Desenvolvimento Web" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-bold mb-1">E-commerce Moderno</h3>
                 <p className="text-gray-500 text-sm mb-3">Desenvolvimento Web</p>
@@ -112,7 +130,13 @@ const LandingPage = () => {
             
             {/* Portfolio Item 2 */}
             <div className="group relative overflow-hidden rounded-lg shadow-lg">
-              <div className="bg-purple-300 aspect-video rounded-t-lg"></div>
+              <div className="aspect-video rounded-t-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+                  alt="Dashboard Power BI" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-bold mb-1">Dashboard Financeiro</h3>
                 <p className="text-gray-500 text-sm mb-3">Power BI</p>
@@ -129,7 +153,13 @@ const LandingPage = () => {
             
             {/* Portfolio Item 3 */}
             <div className="group relative overflow-hidden rounded-lg shadow-lg">
-              <div className="bg-purple-400 aspect-video rounded-t-lg"></div>
+              <div className="aspect-video rounded-t-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e" 
+                  alt="Aplicação Web" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-bold mb-1">App de Gestão</h3>
                 <p className="text-gray-500 text-sm mb-3">Aplicação Web</p>
@@ -158,14 +188,20 @@ const LandingPage = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <div className="bg-gray-200 rounded-lg aspect-video"></div>
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
+                  alt="Equipe de Tecnologia" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Por que escolher nossos serviços?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-purple-800">Por que escolher nossos serviços?</h2>
               <div className="space-y-4 mb-6">
                 <div className="flex gap-4">
-                  <div className="rounded-full bg-blue-100 p-2 h-10 w-10 flex items-center justify-center shrink-0">
-                    <Globe className="h-5 w-5 text-blue-600" />
+                  <div className="rounded-full bg-purple-100 p-2 h-10 w-10 flex items-center justify-center shrink-0">
+                    <Globe className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Experiência Comprovada</h3>
@@ -173,8 +209,8 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="rounded-full bg-blue-100 p-2 h-10 w-10 flex items-center justify-center shrink-0">
-                    <Database className="h-5 w-5 text-blue-600" />
+                  <div className="rounded-full bg-purple-100 p-2 h-10 w-10 flex items-center justify-center shrink-0">
+                    <Database className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Soluções Personalizadas</h3>
@@ -182,7 +218,7 @@ const LandingPage = () => {
                   </div>
                 </div>
               </div>
-              <Button className="bg-blue-600 hover:bg-blue-700">Saiba Mais</Button>
+              <Button className="bg-purple-600 hover:bg-purple-700">Saiba Mais</Button>
             </div>
           </div>
         </div>
@@ -192,7 +228,7 @@ const LandingPage = () => {
       <section className="py-20 bg-gray-50" id="depoimentos">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">O que nossos clientes dizem</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-800">O que nossos clientes dizem</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Conheça as experiências de empresas que transformaram seus negócios com nossas soluções.
             </p>
@@ -351,13 +387,16 @@ const LandingPage = () => {
       </footer>
 
       {/* App Navigation Link */}
-      <div className="fixed bottom-5 right-5">
+      <div className="fixed bottom-5 left-5">
         <Link to="/matches">
           <Button variant="outline" className="bg-white shadow-lg border-2 border-purple-600 text-purple-600 hover:bg-purple-50">
             Acessar App
           </Button>
         </Link>
       </div>
+      
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
     </div>
   );
 };
