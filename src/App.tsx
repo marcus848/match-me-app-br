@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Matches from "./pages/Matches";
 import Chats from "./pages/Chats";
 import Profile from "./pages/Profile";
+import LandingPage from "./pages/LandingPage";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/app" element={<Index />} />
           <Route path="/matches" element={<Matches />} />
           <Route path="/chats" element={<Chats />} />
           <Route path="/profile" element={<Profile />} />
