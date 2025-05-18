@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { WhatsApp } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
@@ -12,7 +12,7 @@ const WhatsAppButton = () => {
       onClick={handleWhatsAppClick}
       className="fixed bottom-5 right-5 z-50 rounded-full w-14 h-14 bg-green-500 hover:bg-green-600 shadow-lg flex items-center justify-center"
     >
-      <WhatsApp className="h-6 w-6" />
+      <Phone className="h-6 w-6" />
     </Button>
   );
 };
